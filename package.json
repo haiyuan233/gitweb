@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs --dest dist"
   },
   "dependencies": {
     "vuepress-sidebar-atuo": "^1.0.3",

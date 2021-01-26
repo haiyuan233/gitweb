@@ -6,30 +6,35 @@ bgImageStyle: {
   height: '350px'
 }
 ---
-<style scoped>
+<style>
 .home-blog .hero h1 {
-    color: aliceblue;
+    color: aliceblue !important;
     font-weight: 600;
     font-size: 2.0rem !important;
 }
 .home-blog .hero .description {
-    color: aliceblue;
+    color: aliceblue !important;
     font-weight: 500;
     font-size: 1.2rem !important;
 }
-.content__default:not(.custom) {
-    display: flex;
-    align-items: flex-start;
-    margin: 20px auto 0 !important;
-    padding: 0 20px !important;
-    max-width: 1126px !important;
-}
+
+
 .more {
     float: right;
     margin-right: 0px;
 }
 .left{
     width: 75%;
+}
+</style>
+
+<style scoped>
+.content__default:not(.custom) {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px auto 0 !important;
+    padding: 0 20px !important;
+    max-width: 1126px !important;
 }
 </style>
 <div class="left">
