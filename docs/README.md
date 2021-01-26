@@ -6,7 +6,7 @@ bgImageStyle: {
   height: '350px'
 }
 ---
-<style>
+<style scoped>
 .home-blog .hero h1 {
     color: aliceblue;
     font-weight: 600;
@@ -18,7 +18,6 @@ bgImageStyle: {
     font-size: 1.2rem !important;
 }
 .content__default:not(.custom) {
-    /*border: black 1px solid;*/
     display: flex;
     align-items: flex-start;
     margin: 20px auto 0 !important;

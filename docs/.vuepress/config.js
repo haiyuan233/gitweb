@@ -20,6 +20,10 @@ module.exports = {
         mode: 'light',
         modePicker: false,
         authorAvatar: '/avatar.jpg',
+        record: '黑ICP备20003393号',
+        recordLink: 'http://beian.miit.gov.cn/',
+        // 项目开始时间，只填写年份
+        startYear: '2020',
         // 博客配置
         blogConfig: {
             category: {
