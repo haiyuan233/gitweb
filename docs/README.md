@@ -6,10 +6,10 @@ bgImageStyle: {
   height: '350px'
 }
 ---
+
 <style>
-.home-blog {
-    background: url("https://s3.ax1x.com/2021/01/26/sX6q4P.png") repeat;
-}
+
+
 .home-blog .hero h1 {
     color: aliceblue !important;
     font-weight: 600;
@@ -29,6 +29,7 @@ bgImageStyle: {
 .left{
     width: 75%;
 }
+
 </style>
 
 <style scoped>

@@ -6,4 +6,28 @@ $backgroundColor = #ffffff                  // 悬浮块背景色
 .site-name {
   color: #d77494 !important;
 }
+body, input[type=range]::-webkit-slider-thumb, input[type=range]::-webkit-slider-runnable-track {
+  cursor: url("https://s3.ax1x.com/2021/01/26/sjpaee.png") 0 0, default !important;
+}
+
+.home-blog, .theme-container {
+  background: url("https://s3.ax1x.com/2021/01/26/sX6q4P.png") repeat;
+  cursor: url("https://s3.ax1x.com/2021/01/26/sjpaee.png") 0 0, default !important;
+}
+
+/* 这是匹配横屏的状态，横屏时的css代码 */
+
+@media all and (orientation :landscape){
+  .page{
+    min-height:88vh;
+  }
+}
+
+/* 这是匹配竖屏的状态，竖屏时的css代码 */
+
+@media all and (orientation :portrait){
+  .page{
+    min-height:95vh;
+  }
+}
 

@@ -5,7 +5,8 @@
   "license": "MIT",
   "devDependencies": {
     "compression-webpack-plugin": "^7.1.2",
-    "vuepress": "^1.8.0"
+    "vuepress": "^1.8.0",
+    "vuepress-plugin-cursor-effects": "^1.0.0"
   },
   "scripts": {
     "dev": "vuepress dev docs",
