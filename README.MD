@@ -23,3 +23,6 @@ npm run build
 
 ## 注意
 > 谷歌日历需科学上网
+
+## 预览
+https://haiyuan233.github.io/
