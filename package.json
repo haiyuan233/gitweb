@@ -11,6 +11,7 @@
     "build": "vuepress build docs --dest dist"
   },
   "dependencies": {
+    "vue-aplayer": "^1.6.1",
     "vuepress-sidebar-atuo": "^1.0.3",
     "vuepress-theme-reco": "^1.6.1"
   }
