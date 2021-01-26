@@ -41,5 +41,17 @@ module.exports = {
                 { icon: 'reco-twitter', link: 'https://twitter.com/zhy64445032' }
             ]
         }
-    }
+    },
+    plugins:
+        {
+            '@vuepress-reco/vuepress-plugin-bgm-player':  // BGM播放器
+            {
+                audios: [
+                    {name: 'Felis',artist: 'M2U (엠투유)',url: '/music/Felis.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/4/4b/Songs_felis.jpg/75px-Songs_felis.jpg'},
+                    {name: 'Grievous Lady',artist: 'Various Artists&Laur',url: '/music/GrievousLady.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/7/7b/Songs_grievouslady.jpg/75px-Songs_grievouslady.jpg'},
+                    {name: 'Tempestissimo',artist: 't+pazolite',url: '/music/Tempestissimo.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/c/c8/Songs_tempestissimo.jpg/75px-Songs_tempestissimo.jpg'},
+                ],
+
+            },
+        },
 }
