@@ -25,4 +25,4 @@ npm run build
 > 谷歌日历需科学上网
 
 ## 预览
-http://http://www.wadanoharasp.com/
+http://www.wadanoharasp.com/
