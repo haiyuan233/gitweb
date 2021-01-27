@@ -1,7 +1,7 @@
 ---
 home: true
 sidebar: false
-bgImage: 'https://s3.ax1x.com/2021/01/26/sXDsiT.png'
+bgImage: 'http://42.193.176.171:8088/bg.png'
 bgImageStyle: {
   height: '350px'
 }

@@ -1,14 +1,39 @@
 <template>
     <div>
         <div class="active-box">
-            <ul class="tab-tilte">
-                <li v-for="item in cur" @click="mark=item.code" :class="{active:mark===item.code}">{{item.name}}</li>
-            </ul>
+          <el-row :gutter="20">
+            <el-col :span="14">
+              <el-tabs  @tab-click="reloadP">
+                <el-tab-pane v-for="item in cur" :label="item.name" :title="item.code"></el-tab-pane>
+              </el-tabs>
+            </el-col>
+            <el-col :span="8">
+              <el-input v-model="keyword" placeholder="input sop name"></el-input>
+            </el-col>
+            <el-col :span="2">
+              <el-button  icon="el-icon-search" circle @click="reloadP('search')"></el-button>
+            </el-col>
+          </el-row>
+
         </div>
         <div class="tab-content">
-            <div v-for="data in param" v-if="fuzzyMatch(data.code,mark)">
-                {{data.name}}:{{data.effect}}
-            </div>
+          <el-table
+              :data="paramPage"
+              stripe
+              border style="margin-bottom:14px;"
+            >
+            <el-table-column property="name" label="SOP" align="center" width="150"></el-table-column>
+            <el-table-column property="effect" label="效果" align="center"></el-table-column>
+          </el-table>
+          <div class="paginationClass" v-if="load">
+            <el-pagination
+                background
+                @current-change="changePage"
+                layout="prev, pager, next"
+                :total="total"
+            >
+            </el-pagination>
+          </div>
         </div>
     </div>
 </template>
@@ -19,6 +44,7 @@
         name: "com-sop",
         data: function () {
             return {
+                load:1,
                 mark:'YE',
                 cur:
                     [{
@@ -45,16 +71,67 @@
                     },{
                         name: 'S8',
                         code: 'YL',
+                    },{
+                        name: 'ALL',
+                        code: 'ALL',
                     },
                     ],
-                param:null
+                param:[],
+                paramA:[],
+                paramPage:[],
+                keyword:'',
+                total: 0,
+                currentPage:1,
             }
         },
         mounted() {
-            this.test()
-            this.param = params().sAbilityList
+          this.paramA = params().sAbilityList
+          this.reloadP()
+          this.changePage(1)
         },
         methods: {
+            reloadP(e){
+              this.load = 0
+              let keyword = this.keyword
+              this.keyword = ''
+              if (e===undefined || e===null){
+                this.mark='YE'
+              }else if(e === 'search'){
+
+              } else {
+                this.mark=e.$attrs.title
+              }
+              let that = this
+              let dataP = []
+              let dataA = []
+              let datas = this.paramA
+              let count = 1
+              let total = 0
+              datas.forEach (data =>{
+                if (count === 10){
+                  dataA.push(dataP)
+                  dataP = []
+                  count = 1
+                }else if(datas[datas.length-1].code === data.code){
+                  dataA.push(dataP)
+                }
+                if (that.fuzzyMatch(data.code,that.mark) || that.mark === 'ALL'){
+                  if (keyword === '' || that.fuzzyMatch(data.name,keyword)){
+                    dataP.push(data)
+                    total ++
+                    count ++
+                  }
+                }
+              })
+              console.log(dataA)
+              this.param = dataA
+              this.total = total
+              this.changePage(1)
+              // 分页样式重置
+              this.$nextTick(() => {
+                this.load = 1
+              })
+            },
             test(){
                 //打印出来是3
                 console.log("add=====",params())
@@ -81,7 +158,10 @@
                     }
                 }
                 return flag
-            }
+            },
+          async changePage(e){
+            this.paramPage = this.param[e-1]
+          },
         }
     }
 </script>
@@ -119,8 +199,9 @@
     }
 
     .tab-content div{
-        width: 75%;
+        width: 100%;
         /*line-height: 20px;*/
         /*text-align: center;*/
     }
+
 </style>
