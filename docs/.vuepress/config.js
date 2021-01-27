@@ -1,10 +1,13 @@
 // const nav =require('./config/nav.js') ;
 const sidebar =require('./config/sidebar.js');
 module.exports = {
-    title: '海原の炼铜工坊',
-    description: '炼铜潜力无穷尽，亩产多少在人为',
+    title: '冶炼工坊',
+    description: 'Is this the only destiny afforded them? What truth will they find at the end of their paths?',
     host: '0.0.0.0',
     port: '8080',
+    head: [
+        ['link', { rel: 'shortcut icon', type: "image/x-icon", href: `/favicon.ico` }]
+    ],
     theme: 'reco',
     themeConfig: {
         // nav,
@@ -45,21 +48,21 @@ module.exports = {
     plugins:
         {
             '@vuepress-reco/vuepress-plugin-bgm-player':  // BGM播放器
-            {
-                // 调试
-                // audios: [
-                //     {name: 'Felis',artist: 'M2U (엠투유)',url: '/music/Felis.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/4/4b/Songs_felis.jpg/75px-Songs_felis.jpg'},
-                //     {name: 'Grievous Lady',artist: 'Various Artists&Laur',url: '/music/GrievousLady.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/7/7b/Songs_grievouslady.jpg/75px-Songs_grievouslady.jpg'},
-                //     {name: 'Tempestissimo',artist: 't+pazolite',url: '/music/Tempestissimo.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/c/c8/Songs_tempestissimo.jpg/75px-Songs_tempestissimo.jpg'},
-                // ],
-                // 生产环境
-                audios: [
-                    {name: 'Felis',artist: 'M2U (엠투유)',url: 'http://42.193.176.171:8088/Felis.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/4/4b/Songs_felis.jpg/75px-Songs_felis.jpg'},
-                    {name: 'Grievous Lady',artist: 'Various Artists&Laur',url: 'http://42.193.176.171:8088/GrievousLady.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/7/7b/Songs_grievouslady.jpg/75px-Songs_grievouslady.jpg'},
-                    {name: 'Tempestissimo',artist: 't+pazolite',url: 'http://42.193.176.171:8088/Tempestissimo.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/c/c8/Songs_tempestissimo.jpg/75px-Songs_tempestissimo.jpg'},
-                ],
+                {
+                    // 调试
+                    audios: [
+                        {name: 'Felis',artist: 'M2U (엠투유)',url: '/music/Felis.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/4/4b/Songs_felis.jpg/75px-Songs_felis.jpg'},
+                        {name: 'Grievous Lady',artist: 'Various Artists&Laur',url: '/music/GrievousLady.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/7/7b/Songs_grievouslady.jpg/75px-Songs_grievouslady.jpg'},
+                        {name: 'Tempestissimo',artist: 't+pazolite',url: '/music/Tempestissimo.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/c/c8/Songs_tempestissimo.jpg/75px-Songs_tempestissimo.jpg'},
+                    ],
+                    // 生产环境
+                    // audios: [
+                    //     {name: 'Felis',artist: 'M2U (엠투유)',url: 'http://42.193.176.171:8088/Felis.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/4/4b/Songs_felis.jpg/75px-Songs_felis.jpg'},
+                    //     {name: 'Grievous Lady',artist: 'Various Artists&Laur',url: 'http://42.193.176.171:8088/GrievousLady.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/7/7b/Songs_grievouslady.jpg/75px-Songs_grievouslady.jpg'},
+                    //     {name: 'Tempestissimo',artist: 't+pazolite',url: 'http://42.193.176.171:8088/Tempestissimo.mp3',cover: 'https://wiki.arcaea.cn/images/thumb/c/c8/Songs_tempestissimo.jpg/75px-Songs_tempestissimo.jpg'},
+                    // ],
 
-            },
+                },
             'cursor-effects': {
                 size: 2,                    // size of the particle, default: 2
                 shape: ['star'],              // shape of the particle, default: 'star'
