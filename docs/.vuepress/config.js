@@ -1,7 +1,7 @@
 // const nav =require('./config/nav.js') ;
 const sidebar =require('./config/sidebar.js');
 module.exports = {
-    title: '冶炼工坊',
+    title: 'Kuso Game的搬运工',
     description: 'Is this the only destiny afforded them? What truth will they find at the end of their paths?',
     host: '0.0.0.0',
     port: '8080',

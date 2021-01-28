@@ -458,7 +458,7 @@ sAbilityList:[
 	{code:"YF31",gid:"AB",name:"S2:火炎の備志",extend:[100,100,100],effect:"炎耐性(0.7)，燃烧耐性上升(75%)。对炎弱点敌人造成伤害上升3%",notex:true,sopget:""},
 	{code:"YF32",gid:"AB",name:"S2:氷雪の備志",extend:[100,100,100],effect:"冰耐性(0.7)，冻结耐性上升(75%)。对冰弱点敌人造成伤害上升3%",notex:true,sopget:""},
 	{code:"YF34",gid:"AB",name:"S2:轟雷の備志",extend:[100,100,100],effect:"雷耐性(0.7)，感电耐性上升(75%)。对雷弱点敌人造成伤害上升3%",notex:true,sopget:"RAスティンガーの因子"},
-	{code:"YF35",gid:"AB",name:"S2:暴風の備志",extend:[100,100,100],effect:"风耐性(0.7)，幻象耐性上升(75%)。风对弱点敌人造成伤害上升3%",notex:true,sopget:"クヴェレスティクスの因子"},
+	{code:"YF35",gid:"AB",name:"S2:暴風の備志",extend:[100,100,100],effect:"风耐性(0.7)，幻象耐性上升(75%)。对风弱点敌人造成伤害上升3%",notex:true,sopget:"クヴェレスティクスの因子"},
 	{code:"YF36",gid:"AB",name:"S2:光明の備志",extend:[100,100,100],effect:"光耐性(0.7)，混乱耐性上升(75%)。对光弱点敌人造成伤害上升3%",notex:true,sopget:"イクルシオクルテの因子"},
 	{code:"YF37",gid:"AB",name:"S2:暗闇の備志",extend:[100,100,100],effect:"暗耐性(0.7)，中毒耐性上升(75%)。对暗弱点敌人造成伤害上升3%",notex:true,sopget:"ランフェシーの因子"},
 	{code:"YF38",gid:"AB",name:"S2:保天輝地",extend:[100,100,100],effect:"空中PP消费减少8%。地上时PP自然回复上升20%，攻击时PP回复上升20%",notex:true,sopget:""},
