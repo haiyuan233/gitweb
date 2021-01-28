@@ -67,14 +67,178 @@
         </el-row>
       </div>
     </div>
-    <div>
+
+    <div v-show="keyword2 === 'EV'">
       <div style="margin-top: 50px">
-        <el-carousel type="card" arrow="never" :autoplay="false" height="600px" indicator-position="none" ref="carousel">
-<!--          <el-carousel-item v-for="item in 4" :key="item" @click.native="carousel(item)">-->
-<!--            <h3 class="medium">{{ item }}</h3>-->
-<!--          </el-carousel-item>-->
+        <el-carousel type="card" arrow="never" :autoplay="false" height="600px" indicator-position="none" ref="carousel0">
           <el-carousel-item @click.native="carousel(1)">
-            <div style="padding: 20px;font-size: 13px;line-height: 25px">
+            <div class="item-box">
+              <h2>レッサー・XXXXⅤ的合成</h2>
+              レッサー系存在以下种类
+              <ul style="color: #d77494;font-weight: 600">
+                <li>レッサーパワー</li>
+                <li>レッサーシュート</li>
+                <li>レッサーテクニック</li>
+                <li>レッサースタミナ</li>
+                <li>レッサースピリタⅤ</li>
+              </ul>
+              以レッサーパワー为例，其他的合成/继承方法相同
+              <div style="margin-top: 15px">
+                <el-table
+                        :cell-style="{'font-size':'10px'}"
+                        :data="[
+                      {title:'继承',param1num1:'-',param1num2:'80%',param1num3:'100%',param2num1:'-',param2num2:'70%',param2num3:'100%',param3num1:'-',param3num2:'50%',param3num3:'100%',param4num1:'-',param4num2:'40%',param4num3:'100%',param5num1:'-',param5num2:'30%',param5num3:'100%',},
+                      {title:'合成',param1num1:'-',param1num2:'-',param1num3:'-',param2num1:'-',param2num2:'70%',param2num3:'70%',param3num1:'-',param3num2:'50%',param3num3:'50%',param4num1:'-',param4num2:'-',param4num3:'30%',param5num1:'-',param5num2:'-',param5num3:'20%',},
+                      ]"
+                        :header-row-style="{'font-size':'10px'}"
+                >
+                  <el-table-column
+                          label="级别">
+                    <el-table-column
+                            prop="title"
+                            label="同名能力数"
+                            width="90">
+                    </el-table-column>
+                  </el-table-column>
+                  <el-table-column
+                          prop="param1"
+                          label="Ⅰ">
+                    <el-table-column
+                            prop="param1num1"
+                            label="1">
+                    </el-table-column>
+                    <el-table-column
+                            prop="param1num2"
+                            label="2">
+                    </el-table-column>
+                    <el-table-column
+                            prop="param1num3"
+                            label="3">
+                    </el-table-column>
+                  </el-table-column>
+                  <el-table-column
+                          prop="param2"
+                          label="Ⅱ">
+                    <el-table-column
+                            prop="param2num1"
+                            label="1">
+                    </el-table-column>
+                    <el-table-column
+                            prop="param2num2"
+                            label="2">
+                    </el-table-column>
+                    <el-table-column
+                            prop="param2num3"
+                            label="3">
+                    </el-table-column>
+                  </el-table-column>
+                  <el-table-column
+                          prop="param3"
+                          label="Ⅲ">
+                    <el-table-column
+                            prop="param3num1"
+                            label="1">
+                    </el-table-column>
+                    <el-table-column
+                            prop="param3num2"
+                            label="2">
+                    </el-table-column>
+                    <el-table-column
+                            prop="param3num3"
+                            label="3">
+                    </el-table-column>
+                  </el-table-column>
+                  <el-table-column
+                          prop="param4"
+                          label="Ⅳ">
+                    <el-table-column
+                            prop="param4num1"
+                            label="1">
+                    </el-table-column>
+                    <el-table-column
+                            prop="param4num2"
+                            label="2">
+                    </el-table-column>
+                    <el-table-column
+                            prop="param4num3"
+                            label="3">
+                    </el-table-column>
+                  </el-table-column>
+                  <el-table-column
+                          prop="param5"
+                          label="Ⅴ">
+                    <el-table-column
+                            prop="param5num1"
+                            label="1">
+                    </el-table-column>
+                    <el-table-column
+                            prop="param5num2"
+                            label="2">
+                    </el-table-column>
+                    <el-table-column
+                            prop="param5num3"
+                            label="3">
+                    </el-table-column>
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item @click.native="carousel(2)">
+            <div class="item-box">
+              <h2>EV系的合成</h2>
+              当素材中存在レッサーパワーⅤ/レッサーシュートⅤ/レッサーテクニックⅤ和<br/>
+              レッサースタミナⅤ/レッサースピリタⅤ各一种时，50%概率合成<br/>
+              <div style="margin-top: 15px">
+                <el-table
+                        height="300"
+                        :cell-style="{'font-size':'10px'}"
+                        :data="[
+                      {param1:'レッサーパワーⅤ',param2:'レッサースタミナⅤ',mix:'EV・パワーHP',success:'50%'},
+                      {param1:'レッサーパワーⅤ',param2:'レッサースピリタⅤ',mix:'EV・パワーPP',success:'50%'},
+                      {param1:'レッサーシュートⅤ',param2:'レッサースタミナⅤ',mix:'EV・シュートHP',success:'50%'},
+                      {param1:'レッサーシュートⅤ',param2:'レッサースピリタⅤ',mix:'EV・シュートPP',success:'50%'},
+                      {param1:'レッサーテクニックⅤ',param2:'レッサースタミナⅤ',mix:'EV・テクニックHPト',success:'50%'},
+                      {param1:'レッサーテクニックⅤ',param2:'レッサースピリタⅤ',mix:'EV・テクニックPP',success:'50%'},
+                      ]"
+                >
+                  <el-table-column
+                          prop="param1"
+                          label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                          prop="param2"
+                          label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                          prop="mix"
+                          label="合成结果">
+                  </el-table-column>
+                  <el-table-column
+                          prop="success"
+                          label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <div style="margin-top: 50px">
+        <el-steps :active="step" align-center>
+          <el-step title="步骤1" description="レッサー・XXXXⅤ的合成" @click.native="loadStep(1,0)"></el-step>
+          <el-step title="步骤2" description="EV系的合成" @click.native="loadStep(2,0)"></el-step>
+        </el-steps>
+      </div>
+    </div>
+
+    <div v-show="keyword2 === 'ジソール'"></div>
+
+    <div v-show="keyword2 === 'アストラル'">
+      <div style="margin-top: 50px">
+        <el-carousel type="card" arrow="never" :autoplay="false" height="600px" indicator-position="none" ref="carousel2">
+          <el-carousel-item @click.native="carousel(1)">
+            <div class="item-box">
               <h2>ソール・カタリスト(魂触媒)的合成</h2>
               当素材中存在以下五种魂能力(ソール系)时出现，成功率10%
               <ul style="color: #d77494;font-weight: 600">
@@ -88,93 +252,93 @@
               但同为カタリスト系的其他几种触媒无法共存
               <div style="margin-top: 15px">
                 <el-table
-                    :cell-style="{'font-size':'5px'}"
-                    :data="[
-                      {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'',success:'10%'},
+                        :cell-style="{'font-size':'10px'}"
+                        :data="[
+                      {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'-',success:'10%'},
                       {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'ソール・カタリスト',success:'30%'}
                       ]"
                 >
                   <el-table-column
-                      prop="param1"
-                      label="素材1">
+                          prop="param1"
+                          label="素材1">
                   </el-table-column>
                   <el-table-column
-                      prop="param2"
-                      label="素材2">
+                          prop="param2"
+                          label="素材2">
                   </el-table-column>
                   <el-table-column
-                      prop="param3"
-                      label="素材3">
+                          prop="param3"
+                          label="素材3">
                   </el-table-column>
                   <el-table-column
-                      prop="success"
-                      label="成功率">
+                          prop="success"
+                          label="成功率">
                   </el-table-column>
                 </el-table>
               </div>
             </div>
           </el-carousel-item>
           <el-carousel-item @click.native="carousel(2)">
-            <div style="padding: 20px;font-size: 13px;line-height: 25px">
+            <div class="item-box">
               <h2>アストラル・ソール(星界魂)的合成</h2>
               当素材中存在四个魂触媒(ソール・カタリスト)和一个深远魂(ダークネス・ソール)
               时出现，成功率10%<br/>
               <div style="margin-top: 15px">
                 <el-table
-                    :cell-style="{'font-size':'5px'}"
-                    :data="[
+                        :cell-style="{'font-size':'5px'}"
+                        :data="[
                       {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'ソール・カタリスト',param4:'ソール・カタリスト',param5:'ダークネス・ソール',success:'30%'}
                       ]"
                 >
                   <el-table-column
-                      prop="param1"
-                      label="素材1">
+                          prop="param1"
+                          label="素材1">
                   </el-table-column>
                   <el-table-column
-                      prop="param2"
-                      label="素材2">
+                          prop="param2"
+                          label="素材2">
                   </el-table-column>
                   <el-table-column
-                      prop="param3"
-                      label="素材3">
+                          prop="param3"
+                          label="素材3">
                   </el-table-column>
                   <el-table-column
-                      prop="param4"
-                      label="素材4">
+                          prop="param4"
+                          label="素材4">
                   </el-table-column>
                   <el-table-column
-                      prop="param5"
-                      label="素材5">
+                          prop="param5"
+                          label="素材5">
                   </el-table-column>
                   <el-table-column
-                      prop="success"
-                      label="成功率">
+                          prop="success"
+                          label="成功率">
                   </el-table-column>
                 </el-table>
               </div>
               アストラル・ソール可通过ソールレセプター(魂保)继承<br/>
               <div style="margin-top: 15px">
                 <el-table
-                    :cell-style="{'font-size':'5px'}"
-                    :data="[
+                        :cell-style="{'font-size':'5px'}"
+                        :data="[
                       {param1:'アストラル・ソール',param2:'ソールレセプター',param3:'',success:'10%'},
                       ]"
                 >
                   <el-table-column
-                      prop="param1"
-                      label="素材1">
+                          prop="param1"
+                          label="素材1">
                   </el-table-column>
                   <el-table-column
-                      prop="param2"
-                      label="素材2">
+                          prop="param2"
+                          label="素材2">
                   </el-table-column>
                   <el-table-column
-                      prop="param3"
-                      label="素材3">
+                          prop="param3"
+                          label="素材3">
                   </el-table-column>
                   <el-table-column
-                      prop="success"
-                      label="成功率">
+                          prop="success"
+                          label="成功率">
                   </el-table-column>
                 </el-table>
               </div>
@@ -184,11 +348,20 @@
       </div>
       <div style="margin-top: 50px">
         <el-steps :active="step" align-center>
-          <el-step title="步骤1" description="ソール・カタリスト(魂触媒)的合成" @click.native="loadStep(1)"></el-step>
-          <el-step title="步骤2" description="アストラル・ソール(星界魂)的合成" @click.native="loadStep(2)"></el-step>
+          <el-step title="步骤1" description="ソール・カタリスト(魂触媒)的合成" @click.native="loadStep(1,2)"></el-step>
+          <el-step title="步骤2" description="アストラル・ソール(星界魂)的合成" @click.native="loadStep(2,2)"></el-step>
         </el-steps>
       </div>
     </div>
+
+    <div v-show="keyword2 === 'エーテル'"></div>
+
+    <div v-show="keyword2 === 'マナ'"></div>
+
+    <div v-show="keyword2 === 'アブソリュート'"></div>
+
+    <div v-show="keyword2 === 'ガーディアン'"></div>
+
   </div>
 </template>
 
@@ -313,7 +486,7 @@ export default {
       paramA:[],
       paramPage:[],
       keyword:[],
-      keyword2:[],
+      keyword2:'EV',
       total: 0,
       currentPage:1,
       load:1,
@@ -329,9 +502,34 @@ export default {
       console.log(e)
       this.step = e
     },
-    loadStep(e){
+    loadStep(e,num){
       this.step = e
-      this.$refs.carousel.setActiveItem(e-1)
+      switch (num) {
+        case 0:
+          this.$refs.carousel0.setActiveItem(e-1)
+          break
+        case 1:
+          this.$refs.carousel1.setActiveItem(e-1)
+          break
+        case 2:
+          this.$refs.carousel2.setActiveItem(e-1)
+          break
+        case 3:
+          this.$refs.carousel3.setActiveItem(e-1)
+          break
+        case 4:
+          this.$refs.carousel4.setActiveItem(e-1)
+          break
+        case 5:
+          this.$refs.carousel5.setActiveItem(e-1)
+          break
+        case 6:
+          this.$refs.carousel6.setActiveItem(e-1)
+          break
+        default:
+          break
+      }
+      console.log(this.$refs.carousel)
     },
     handleChange(value) {
       this.keyword = value
@@ -339,8 +537,9 @@ export default {
       console.log(value);
     },
     handleChange2(value) {
-      this.keyword2 = value
-      console.log(value);
+      this.keyword2 = value[0]
+      this.step = 1
+      console.log(value)
     },
     reloadP(){
       this.load = 0
@@ -477,4 +676,10 @@ export default {
   height: 50px !important;
 }
 
+.item-box {
+  padding: 20px;font-size: 13px;line-height: 25px;max-height: 600px;overflow: scroll;
+}
+body .el-table th.gutter{
+  display: table-cell!important;
+}
 </style>
