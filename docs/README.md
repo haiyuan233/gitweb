@@ -1,7 +1,7 @@
 ---
 home: true
 sidebar: false
-bgImage: 'http://42.193.176.171:8088/bg.png'
+bgImage: 'http://source.wadanoharasp.com/bg.png'
 bgImageStyle: {
   height: '350px'
 }

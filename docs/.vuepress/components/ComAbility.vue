@@ -466,12 +466,12 @@ export default {
 }
 
 .el-carousel__item:nth-child(2n) {
-  background: url("http://42.193.176.171:8088/footer-banner-bg.png") repeat;
+  background: url("http://source.wadanoharasp.com/footer-banner-bg.png") repeat;
 }
 
 .el-carousel__item:nth-child(2n+1) {
   /*background-color: #d3dce6;*/
-  background: url("http://42.193.176.171:8088/footer-banner-bg.png") repeat;
+  background: url("http://source.wadanoharasp.com/footer-banner-bg.png") repeat;
 }
 .el-table__header {
   height: 50px !important;
