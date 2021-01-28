@@ -198,7 +198,7 @@
                       {param1:'レッサーパワーⅤ',param2:'レッサースピリタⅤ',mix:'EV・パワーPP',success:'50%'},
                       {param1:'レッサーシュートⅤ',param2:'レッサースタミナⅤ',mix:'EV・シュートHP',success:'50%'},
                       {param1:'レッサーシュートⅤ',param2:'レッサースピリタⅤ',mix:'EV・シュートPP',success:'50%'},
-                      {param1:'レッサーテクニックⅤ',param2:'レッサースタミナⅤ',mix:'EV・テクニックHPト',success:'50%'},
+                      {param1:'レッサーテクニックⅤ',param2:'レッサースタミナⅤ',mix:'EV・テクニックHP',success:'50%'},
                       {param1:'レッサーテクニックⅤ',param2:'レッサースピリタⅤ',mix:'EV・テクニックPP',success:'50%'},
                       ]"
                 >
