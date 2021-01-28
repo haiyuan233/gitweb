@@ -10,7 +10,7 @@
                 :options="options"
                 :props="{ checkStrictly: true }"
                 @change="handleChange"
-                clearable></el-cascader>
+                ></el-cascader>
           </el-col>
           <el-col :span="8">
             <el-input v-model="input" placeholder="input ability name"></el-input>
@@ -35,14 +35,18 @@
             background
             @current-change="changePage"
             layout="prev, pager, next"
-            page-size="15"
+            :page-size=15
             :total="total"
         >
         </el-pagination>
       </div>
     </div>
+
     <div style="margin-top: 50px"></div>
-    <H2>能力合成</H2>
+    <H2>通常能力合成</H2>
+
+    <div style="margin-top: 50px"></div>
+    <H2>特殊能力合成</H2>
     <div class="tab-content2">
       <div class="block2">
         <el-row :gutter="20">
@@ -52,7 +56,7 @@
                 :options="mixOptions"
                 :props="{ checkStrictly: true }"
                 @change="handleChange2"
-                clearable></el-cascader>
+                ></el-cascader>
           </el-col>
           <el-col :span="8">
             <el-input v-model="input2" placeholder="input ability name"></el-input>
@@ -61,6 +65,23 @@
             <el-button  icon="el-icon-search" circle @click=""></el-button>
           </el-col>
         </el-row>
+      </div>
+    </div>
+    <div>
+      <div style="margin-top: 50px">
+        <el-carousel type="card" arrow="never" :autoplay="false" height="600px" indicator-position="none" ref="carousel">
+          <el-carousel-item v-for="item in 4" :key="item" @click.native="carousel(item)">
+            <h3 class="medium">{{ item }}</h3>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <div style="margin-top: 50px">
+        <el-steps :active="step" align-center>
+          <el-step title="步骤1" description="这是一段很长很长很长的描述性文字" @click.native="loadStep(1)"></el-step>
+          <el-step title="步骤2" description="这是一段很长很长很长的描述性文字" @click.native="loadStep(2)"></el-step>
+          <el-step title="步骤3" description="这是一段很长很长很长的描述性文字" @click.native="loadStep(3)"></el-step>
+          <el-step title="步骤4" description="这是一段很长很长很长的描述性文字" @click.native="loadStep(4)"></el-step>
+        </el-steps>
       </div>
     </div>
   </div>
@@ -74,9 +95,12 @@ export default {
     return {
       value: [],
       mixValue: [],
+      step:1,
       input:'',
       input2:'',
-      options: [{
+      options:
+          [
+      {
         value: 'ALL',
         label: 'ALL',
       },{
@@ -158,9 +182,30 @@ export default {
       }],
       mixOptions:[
           {
-            value: 'ALL',
-            label: 'ALL',
-          }
+            value: 'EV',
+            label: 'EV系',
+          },{
+            value: 'ジソール',
+            label: '○○・ジ・ソール',
+          },{
+            value: 'アストラル',
+            label: 'アストラル・ソール',
+          },{
+            value: 'アストラル',
+            label: 'アストラル・ソール',
+          },{
+            value: 'エーテル',
+            label: 'エーテル・ファクター',
+          },{
+            value: 'マナ',
+            label: 'マナ・レヴリー',
+          },{
+            value: 'アブソリュート',
+            label: 'アブソリュート・グレア',
+          },{
+            value: 'ガーディアン',
+            label: 'ガーディアン・ソール',
+          },
       ],
       param:[],
       paramA:[],
@@ -178,6 +223,14 @@ export default {
     this.changePage(1)
   },
   methods: {
+    carousel(e) {
+      console.log(e)
+      this.step = e
+    },
+    loadStep(e){
+      this.step = e
+      this.$refs.carousel.setActiveItem(e-1)
+    },
     handleChange(value) {
       this.keyword = value
       this.reloadP()
@@ -302,4 +355,21 @@ export default {
 .tab-content2 {
   margin-top: 10px;
 }
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 200px;
+  margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background: url("http://42.193.176.171:8088/footer-banner-bg.png") repeat;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+  /*background-color: #d3dce6;*/
+  background: url("http://42.193.176.171:8088/footer-banner-bg.png") repeat;
+}
+
 </style>
