@@ -15,6 +15,12 @@ body, input[type=range]::-webkit-slider-thumb, input[type=range]::-webkit-slider
   cursor: url("http://42.193.176.171:8088/cusr.png") 0 0, default !important;
 }
 
+#app {
+  cursor: url("http://42.193.176.171:8088/cusr.png") 0 0,default !important;
+  background: url("http://42.193.176.171:8088/kv-slide-loading-bg.png") repeat !important;
+  min-height: 1080px !important;
+}
+
 /* 这是匹配横屏的状态，横屏时的css代码 */
 
 @media all and (orientation :landscape){
@@ -54,5 +60,11 @@ body, input[type=range]::-webkit-slider-thumb, input[type=range]::-webkit-slider
 .el-input.is-active .el-input__inner, .el-input__inner:focus {
   border-color: #d77494 !important;
 }
+
+// el表格多出空白行，未知，强制写死解决
+.el-table__header-wrapper{
+  height:48px
+}
+
 
 

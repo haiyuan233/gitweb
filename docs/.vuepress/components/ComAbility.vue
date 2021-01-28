@@ -43,10 +43,10 @@
     </div>
 
     <div style="margin-top: 50px"></div>
-    <H2>通常能力合成</H2>
+    <H2>通常能力合成(施工中)</H2>
 
     <div style="margin-top: 50px"></div>
-    <H2>特殊能力合成</H2>
+    <H2>高级能力合成(施工中)</H2>
     <div class="tab-content2">
       <div class="block2">
         <el-row :gutter="20">
@@ -70,17 +70,122 @@
     <div>
       <div style="margin-top: 50px">
         <el-carousel type="card" arrow="never" :autoplay="false" height="600px" indicator-position="none" ref="carousel">
-          <el-carousel-item v-for="item in 4" :key="item" @click.native="carousel(item)">
-            <h3 class="medium">{{ item }}</h3>
+<!--          <el-carousel-item v-for="item in 4" :key="item" @click.native="carousel(item)">-->
+<!--            <h3 class="medium">{{ item }}</h3>-->
+<!--          </el-carousel-item>-->
+          <el-carousel-item @click.native="carousel(1)">
+            <div style="padding: 20px;font-size: 13px;line-height: 25px">
+              <h2>ソール・カタリスト(魂触媒)的合成</h2>
+              当素材中存在以下五种魂能力(ソール系)时出现，成功率10%
+              <ul style="color: #d77494;font-weight: 600">
+                <li>アプレンティス・ソール</li>
+                <li>エルダー・ソール</li>
+                <li>ルーサー・ソール</li>
+                <li>ダブル・ソール</li>
+                <li>ペルソナ・ソール</li>
+              </ul>
+              ソール・カタリスト可继承<br/>
+              但同为カタリスト系的其他几种触媒无法共存
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'5px'}"
+                    :data="[
+                      {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'',success:'10%'},
+                      {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'ソール・カタリスト',success:'30%'}
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item @click.native="carousel(2)">
+            <div style="padding: 20px;font-size: 13px;line-height: 25px">
+              <h2>アストラル・ソール(星界魂)的合成</h2>
+              当素材中存在四个魂触媒(ソール・カタリスト)和一个深远魂(ダークネス・ソール)
+              时出现，成功率10%<br/>
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'5px'}"
+                    :data="[
+                      {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'ソール・カタリスト',param4:'ソール・カタリスト',param5:'ダークネス・ソール',success:'30%'}
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param4"
+                      label="素材4">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param5"
+                      label="素材5">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+              アストラル・ソール可通过ソールレセプター(魂保)继承<br/>
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'5px'}"
+                    :data="[
+                      {param1:'アストラル・ソール',param2:'ソールレセプター',param3:'',success:'10%'},
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
           </el-carousel-item>
         </el-carousel>
       </div>
       <div style="margin-top: 50px">
         <el-steps :active="step" align-center>
-          <el-step title="步骤1" description="这是一段很长很长很长的描述性文字" @click.native="loadStep(1)"></el-step>
-          <el-step title="步骤2" description="这是一段很长很长很长的描述性文字" @click.native="loadStep(2)"></el-step>
-          <el-step title="步骤3" description="这是一段很长很长很长的描述性文字" @click.native="loadStep(3)"></el-step>
-          <el-step title="步骤4" description="这是一段很长很长很长的描述性文字" @click.native="loadStep(4)"></el-step>
+          <el-step title="步骤1" description="ソール・カタリスト(魂触媒)的合成" @click.native="loadStep(1)"></el-step>
+          <el-step title="步骤2" description="アストラル・ソール(星界魂)的合成" @click.native="loadStep(2)"></el-step>
         </el-steps>
       </div>
     </div>
@@ -186,25 +291,22 @@ export default {
             label: 'EV系',
           },{
             value: 'ジソール',
-            label: '○○・ジ・ソール',
+            label: '○○・ジ・ソール/合成魂',
           },{
             value: 'アストラル',
-            label: 'アストラル・ソール',
-          },{
-            value: 'アストラル',
-            label: 'アストラル・ソール',
+            label: 'アストラル・ソール/星界魂',
           },{
             value: 'エーテル',
-            label: 'エーテル・ファクター',
+            label: 'エーテル・ファクター/以太因子',
           },{
             value: 'マナ',
-            label: 'マナ・レヴリー',
+            label: 'マナ・レヴリー/马纳梦',
           },{
             value: 'アブソリュート',
-            label: 'アブソリュート・グレア',
+            label: 'アブソリュート・グレア/绝对真理闪',
           },{
             value: 'ガーディアン',
-            label: 'ガーディアン・ソール',
+            label: 'ガーディアン・ソール/守护辉士魂',
           },
       ],
       param:[],
@@ -370,6 +472,9 @@ export default {
 .el-carousel__item:nth-child(2n+1) {
   /*background-color: #d3dce6;*/
   background: url("http://42.193.176.171:8088/footer-banner-bg.png") repeat;
+}
+.el-table__header {
+  height: 50px !important;
 }
 
 </style>
