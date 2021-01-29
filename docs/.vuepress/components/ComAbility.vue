@@ -46,7 +46,7 @@
     <H2>通常能力合成(施工中)</H2>
 
     <div style="margin-top: 50px"></div>
-    <H2>高级能力合成(施工中)</H2>
+    <H2>高级能力合成</H2>
     <div class="tab-content2">
       <div class="block2">
         <el-row :gutter="20">
@@ -232,7 +232,84 @@
       </div>
     </div>
 
-    <div v-show="keyword2 === 'ジソール'"></div>
+    <div v-show="keyword2 === 'ジソール'">
+      <div style="margin-top: 50px">
+        <el-carousel type="card" arrow="never" :autoplay="false" height="600px" indicator-position="none" ref="carousel1">
+          <el-carousel-item @click.native="carousel(1)">
+            <div class="item-box">
+              <h2>○○・ジ・ソール的合成</h2>
+              一共存在<span style="font-weight: 600">アクト・ジ・ソール</span>、<span style="font-weight: 600">ティル・ジ・ソール</span>、<span style="font-weight: 600">マギー・ジ・ソール</span>、<span style="font-weight: 600">アレス・ジ・ソール</span>四个种类<br/>
+              EP1～3的BOSSソール系能力 +  EP4～5的行星BOSSソール系能力合成，成功率70%<br/>
+              <span style="font-weight: 600">EP1～3的BOSSソール系能力</span>
+              <ul style="color: #d77494;font-weight: 600">
+                <li>グンネ・ソール</li>
+                <li>ジグモル・ソール</li>
+                <li>ヴォル・ソール</li>
+                <li>クォーツ・ソール</li>
+                <li>ファング・ソール</li>
+                <li>ネプト・ソール</li>
+                <li>スノウ・ソール</li>
+                <li>エクス・ソール</li>
+                <li>ヴァーダー・ソール</li>
+                <li>シュレイダ・ソール</li>
+                <li>メデューナ・ソール</li>
+                <li>リンガ・ソール</li>
+                <li>バル・ソール</li>
+              </ul>
+              <span style="font-weight: 600">EP4～5的BOSSソール系能力</span>
+              <ul style="color: #d77494;font-weight: 600">
+                <li>トウオウ・ソール</li>
+                <li>フルベガス・ソール</li>
+                <li>エスカード・ソール</li>
+                <li>ファーブラ・ソール</li>
+                <li>イストリア・ソール</li>
+              </ul>
+              EP1～3的BOSSソール系能力 +  EP6的超界BOSSソール系能力合成，成功率90%<br/>
+              <span style="font-weight: 600">EP6的超界BOSSソール系能力</span>
+              <ul style="color: #d77494;font-weight: 600">
+                <li>イクスアクト・ソール</li>
+                <li>イクスティル・ソール</li>
+                <li>イクスマギー・ソール</li>
+                <li>イクスアレス・ソール</li>
+              </ul>
+              <span style="font-weight: 600">继承</span>
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'10px'}"
+                    :data="[
+                      {param1:'○○・ジ・ソール',param2:'○○・ジ・ソール',param3:'-',success:'25%'},
+                      {param1:'○○・ジ・ソール',param2:'○○・ジ・ソール',param3:'○○・ジ・ソール',success:'40%'},
+                      {param1:'○○・ジ・ソール',param2:'ソールレセプター',param3:'-',success:'50%'}
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <div style="margin-top: 50px">
+        <el-steps :active="step" align-center>
+          <el-step title="步骤1" description="○○・ジ・ソール的合成" @click.native="loadStep(1,6)"></el-step>
+        </el-steps>
+      </div>
+    </div>
 
     <div v-show="keyword2 === 'アストラル'">
       <div style="margin-top: 50px">
@@ -255,7 +332,8 @@
                         :cell-style="{'font-size':'10px'}"
                         :data="[
                       {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'-',success:'10%'},
-                      {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'ソール・カタリスト',success:'30%'}
+                      {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'ソール・カタリスト',success:'30%'},
+                      {param1:'ソール・カタリスト',param2:'カタリストレセプター',param3:'-',success:'100%'}
                       ]"
                 >
                   <el-table-column
@@ -354,13 +432,507 @@
       </div>
     </div>
 
-    <div v-show="keyword2 === 'エーテル'"></div>
+    <div v-show="keyword2 === 'エーテル'">
+      <div style="margin-top: 50px">
+        <el-carousel type="card" arrow="never" :autoplay="false" height="600px" indicator-position="none" ref="carousel3">
+          <el-carousel-item @click.native="carousel(1)">
+            <div class="item-box">
+              <h2>ファクター・カタリスト(因子触媒)的合成</h2>
+              当素材中存在以下三种因子能力(ファクター系)时出现，成功率10%
+              <ul style="color: #d77494;font-weight: 600">
+                <li>ヤマト・ファクター</li>
+                <li>マザー・ファクター</li>
+                <li>デウス・ファクター</li>
+              </ul>
+              也可以通过使用道具<span style="color: #d77494;font-weight: 600">特殊能力(ファクターC)</span>直接100%追加<br/>
+              ファクター・カタリスト可继承<br/>
+              但同为カタリスト系的其他几种触媒无法共存
+              <div style="margin-top: 15px">
+                <el-table
+                        :cell-style="{'font-size':'10px'}"
+                        :data="[
+                      {param1:'ファクター・カタリスト',param2:'ファクター・カタリスト',param3:'-',success:'10%'},
+                      {param1:'ファクター・カタリスト',param2:'ファクター・カタリスト',param3:'ファクター・カタリスト',success:'30%'},
+                      {param1:'ファクター・カタリスト',param2:'カタリストレセプター',param3:'-',success:'100%'}
+                      ]"
+                >
+                  <el-table-column
+                          prop="param1"
+                          label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                          prop="param2"
+                          label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                          prop="param3"
+                          label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                          prop="success"
+                          label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item @click.native="carousel(2)">
+            <div class="item-box">
+              <h2>エーテル・ソール(以太魂)的合成</h2>
+              当素材中存在以下三种魂能力其中之二时出现，成功率10%
+              <ul style="color: #d77494;font-weight: 600">
+                <li>トウオウ・ソール</li>
+                <li>フルベガス・ソール</li>
+                <li>エスカード・ソール</li>
+              </ul>
+              也可以通过使用道具<span style="color: #d77494;font-weight: 600">特殊能力(エーテルS)</span>直接100%追加<br/>
+              エーテル・ソール可通过ソールレセプター(魂保)继承<br/>
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'5px'}"
+                    :data="[
+                      {param1:'エーテル・ソール',param2:'ソールレセプター',param3:'',success:'10%'},
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item @click.native="carousel(3)">
+            <div class="item-box">
+              <h2>エーテル・ファクター(以太因子)的合成</h2>
+              当素材中存在四个因子触媒(ファクター・カタリスト)和一个以太魂(エーテル・ソール)
+              时出现，成功率10%<br/>
+              <div style="margin-top: 15px">
+                <el-table
+                        :cell-style="{'font-size':'5px'}"
+                        :data="[
+                      {param1:'ファクター・カタリスト',param2:'ファクター・カタリスト',param3:'ファクター・カタリスト',param4:'ファクター・カタリスト',param5:'エーテル・ソール',success:'30%'}
+                      ]"
+                >
+                  <el-table-column
+                          prop="param1"
+                          label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                          prop="param2"
+                          label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                          prop="param3"
+                          label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                          prop="param4"
+                          label="素材4">
+                  </el-table-column>
+                  <el-table-column
+                          prop="param5"
+                          label="素材5">
+                  </el-table-column>
+                  <el-table-column
+                          prop="success"
+                          label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+              エーテル・ファクター可通过ファクターレセプター(因子保)继承<br/>
+              <div style="margin-top: 15px">
+                <el-table
+                        :cell-style="{'font-size':'5px'}"
+                        :data="[
+                      {param1:'エーテル・ファクター',param2:'ファクターレセプター',param3:'',success:'10%'},
+                      ]"
+                >
+                  <el-table-column
+                          prop="param1"
+                          label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                          prop="param2"
+                          label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                          prop="param3"
+                          label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                          prop="success"
+                          label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <div style="margin-top: 50px">
+        <el-steps :active="step" align-center>
+          <el-step title="步骤1" description="ファクター・カタリスト(因子触媒)的合成" @click.native="loadStep(1,3)"></el-step>
+          <el-step title="步骤2" description="エーテル・ソール(以太魂)的合成" @click.native="loadStep(2,3)"></el-step>
+          <el-step title="步骤2" description="エーテル・ファクター(以太因子)的合成" @click.native="loadStep(3,3)"></el-step>
+        </el-steps>
+      </div>
+    </div>
 
-    <div v-show="keyword2 === 'マナ'"></div>
+    <div v-show="keyword2 === 'マナ'">
+      <div style="margin-top: 50px">
+        <el-carousel type="card" arrow="never" :autoplay="false" height="600px" indicator-position="none" ref="carousel4">
+          <el-carousel-item @click.native="carousel(1)">
+            <div class="item-box">
+              <h2>レヴリー・カタリスト(梦境触媒)的合成</h2>
+              当素材中存在以下五种梦境能力(レヴリー系)时出现，成功率10%
+              <ul style="color: #d77494;font-weight: 600">
+                <li>アプレジナ・レヴリー</li>
+                <li>エルダー・レヴリー</li>
+                <li>ルーサー・レヴリー</li>
+                <li>ダブル・レヴリー</li>
+                <li>ペルソナ・レヴリー</li>
+              </ul>
+              也可以通过使用道具<span style="color: #d77494;font-weight: 600">特殊能力(レヴリーC)</span>直接100%追加<br/>
+              レヴリー・カタリスト可继承<br/>
+              但同为カタリスト系的其他几种触媒无法共存
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'10px'}"
+                    :data="[
+                      {param1:'レヴリー・カタリスト',param2:'レヴリー・カタリスト',param3:'-',success:'10%'},
+                      {param1:'レヴリー・カタリスト',param2:'レヴリー・カタリスト',param3:'ファクター・カタリスト',success:'30%'},
+                      {param1:'レヴリー・カタリスト',param2:'カタリストレセプター',param3:'-',success:'100%'}
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item @click.native="carousel(2)">
+            <div class="item-box">
+              <h2>オメガ・メモリア(欧米茄回忆)的合成</h2>
+              当素材中存在以下三种能力时出现，成功率10%
+              <ul style="color: #d77494;font-weight: 600">
+                <li>ファーブラ・ソール</li>
+                <li>イストリア・ソール</li>
+                <li>オメガ・レヴリー</li>
+              </ul>
+              也可以通过使用道具<span style="color: #d77494;font-weight: 600">特殊能力(オメガM)</span>直接100%追加<br/>
+              オメガ・メモリア可继承<br/>
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'10px'}"
+                    :data="[
+                      {param1:'オメガ・メモリア',param2:'オメガ・メモリア',param3:'-',success:'50%'},
+                      {param1:'オメガ・メモリア',param2:'オメガ・メモリア',param3:'オメガ・メモリア',success:'80%'},
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item @click.native="carousel(3)">
+            <div class="item-box">
+              <h2>マナ・レヴリー(马纳梦境)的合成</h2>
+              当素材中存在四个梦境触媒(レヴリー・カタリスト)和一个欧米茄回忆(オメガ・メモリア)
+              时出现，成功率10%<br/>
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'5px'}"
+                    :data="[
+                      {param1:'レヴリー・カタリスト',param2:'レヴリー・カタリスト',param3:'レヴリー・カタリスト',param4:'レヴリー・カタリスト',param5:'オメガ・メモリア',success:'30%'}
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param4"
+                      label="素材4">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param5"
+                      label="素材5">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+              マナ・レヴリー可通过レヴリーレセプター(梦境保)继承<br/>
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'5px'}"
+                    :data="[
+                      {param1:'マナ・レヴリー',param2:'レヴリーレセプター',param3:'',success:'10%'},
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <div style="margin-top: 50px">
+        <el-steps :active="step" align-center>
+          <el-step title="步骤1" description="レヴリー・カタリスト(梦境触媒)的合成" @click.native="loadStep(1,4)"></el-step>
+          <el-step title="步骤2" description="オメガ・メモリア(欧米茄回忆)的合成" @click.native="loadStep(2,4)"></el-step>
+          <el-step title="步骤2" description="マナ・レヴリー(马纳梦境)的合成" @click.native="loadStep(3,4)"></el-step>
+        </el-steps>
+      </div>
+    </div>
 
-    <div v-show="keyword2 === 'アブソリュート'"></div>
+    <div v-show="keyword2 === 'アブソリュート'">
+      <div style="margin-top: 50px">
+        <el-carousel type="card" arrow="never" :autoplay="false" height="600px" indicator-position="none" ref="carousel5">
+          <el-carousel-item @click.native="carousel(1)">
+            <div class="item-box">
+              <h2>グレア・カタリスト(闪触媒)的合成</h2>
+              当素材中存在以下五种闪能力(グレア系)其中四个时出现，成功率10%<br/>
+              <span style="color: #0099ff ;font-weight: 600">アンジュール</span>与<span style="color: #0099ff;font-weight: 600">ドゥミヌス</span>为互相替换的关系
+              <ul style="color: #d77494;font-weight: 600">
+                <li style="color: #0099ff">アンジュール・グレア</li>
+                <li style="color: #0099ff">ドゥミヌス・グレア</li>
+                <li>ベルージュ・グレア</li>
+                <li>フォードルス・グレア</li>
+                <li>エクゼクル・グレア</li>
+              </ul>
+              グレア・カタリスト只可通过触媒保(カタリストレセプター)继承。<br/>
+              同为カタリスト系的其他几种触媒无法共存
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'10px'}"
+                    :data="[
+                      {param1:'グレア・カタリスト',param2:'カタリストレセプター',param3:'-',success:'100%'}
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item @click.native="carousel(2)">
+            <div class="item-box">
+              <h2>フォトナー・グレア(光子闪)的合成</h2>
+              当素材中存在以下四种闪能力(グレア系)时出现，成功率10%
+              <ul style="color: #d77494;font-weight: 600">
+                <li>シバ・グレア</li>
+                <li>ヴァルナ・グレア</li>
+                <li>ミトラ・グレア</li>
+                <li>オリジン・グレア</li>
+              </ul>
+              フォトナー・グレア可继承<br/>
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'10px'}"
+                    :data="[
+                      {param1:'フォトナー・グレア',param2:'-',success:'30%'},
+                      {param1:'フォトナー・グレア',param2:'フォトナー・グレア',success:'50%'},
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item @click.native="carousel(3)">
+            <div class="item-box">
+              <h2>アブソリュート・グレア的合成</h2>
+              当素材中存在四个闪触媒(グレア・カタリスト)和一个光子闪(フォトナー・グレア)
+              时出现，成功率10%<br/>
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'5px'}"
+                    :data="[
+                      {param1:'グレア・カタリスト',param2:'グレア・カタリスト',param3:'グレア・カタリスト',param4:'グレア・カタリスト',param5:'フォトナー・グレア',success:'30%'}
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param4"
+                      label="素材4">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param5"
+                      label="素材5">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <div style="margin-top: 50px">
+        <el-steps :active="step" align-center>
+          <el-step title="步骤1" description="グレア・カタリスト(闪触媒)的合成" @click.native="loadStep(1,5)"></el-step>
+          <el-step title="步骤2" description="フォトナー・グレア(光子闪)的合成" @click.native="loadStep(2,5)"></el-step>
+          <el-step title="步骤2" description="アブソリュート・グレア的合成" @click.native="loadStep(3,5)"></el-step>
+        </el-steps>
+      </div>
+    </div>
 
-    <div v-show="keyword2 === 'ガーディアン'"></div>
+    <div v-show="keyword2 === 'ガーディアン'">
+      <div style="margin-top: 50px">
+        <el-carousel type="card" arrow="never" :autoplay="false" height="600px" indicator-position="none" ref="carousel6">
+          <el-carousel-item @click.native="carousel(1)">
+            <div class="item-box">
+              <h2>ガーディアン・ソール的合成</h2>
+              当素材中存在以下四种能力时出现，成功率10%<br/>
+              <ul style="color: #d77494;font-weight: 600">
+                <li>アストラル・ソール/星界魂</li>
+                <li>エーテル・ファクター/以太因子</li>
+                <li>マナ・レヴリー/马纳梦境</li>
+                <li>アブソリュート・グレア/绝对真理闪</li>
+              </ul>
+              ガーディアン・ソール可通过魂保(ソールレセプター)继承。<br/>
+              同为ソール系的能力无法共存
+              <div style="margin-top: 15px">
+                <el-table
+                    :cell-style="{'font-size':'10px'}"
+                    :data="[
+                      {param1:'ガーディアン・ソール',param2:'ソールレセプター',param3:'-',success:'100%'}
+                      ]"
+                >
+                  <el-table-column
+                      prop="param1"
+                      label="素材1">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param2"
+                      label="素材2">
+                  </el-table-column>
+                  <el-table-column
+                      prop="param3"
+                      label="素材3">
+                  </el-table-column>
+                  <el-table-column
+                      prop="success"
+                      label="成功率">
+                  </el-table-column>
+                </el-table>
+              </div>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <div style="margin-top: 50px">
+        <el-steps :active="step" align-center>
+          <el-step title="步骤1" description="ガーディアン・ソール的合成" @click.native="loadStep(1,1)"></el-step>
+        </el-steps>
+      </div>
+    </div>
 
   </div>
 </template>
@@ -665,12 +1237,12 @@ export default {
 }
 
 .el-carousel__item:nth-child(2n) {
-  background: url("http://source.wadanoharasp.com/footer-banner-bg.png") repeat;
+  background: url("http://42.193.176.171/footer-banner-bg.png") repeat;
 }
 
 .el-carousel__item:nth-child(2n+1) {
   /*background-color: #d3dce6;*/
-  background: url("http://source.wadanoharasp.com/footer-banner-bg.png") repeat;
+  background: url("http://42.193.176.171/footer-banner-bg.png") repeat;
 }
 .el-table__header {
   height: 50px !important;
