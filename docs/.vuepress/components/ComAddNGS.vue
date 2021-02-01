@@ -71,7 +71,8 @@
       <el-col :span="14">
         <el-card class="box-card">
           <div v-for="item in property">
-            {{item}}
+            <div v-if="item.data !== 0 && item.data !== '' && item.data !== '累加'">{{item.label + item.data + '%'}}</div><br/>
+            <div v-if="item.data === '累加'">{{item.data}}</div>
           </div>
         </el-card>
       </el-col>
@@ -83,7 +84,7 @@
 
 <script>
 import {params} from '/docs/js/param';
-import {ngs} from '/docs/js/ngs';
+import {ngsParams} from '/docs/js/ngs';
 export default {
   name: "com-add-NGS",
   data:function (){
@@ -239,11 +240,14 @@ export default {
     },
     handleChange(value){
       let v = this.value
-      console.log(v)
+      // console.log(v)
     },
     setProperty(){
       let that = this
-      let ngs = this.ngsParams()
+      let value = this.value
+      // let v = this.value
+      // console.log(v)
+      let ngs = ngsParams()
       let values = [
         {
           label:'威力+',
@@ -268,6 +272,9 @@ export default {
           data:0
         },{
           label:'PP+',
+          data:0
+        },{
+          label:'PP消費軽減+',
           data:0
         },{
           label:'威力下限補正＋',
@@ -297,17 +304,42 @@ export default {
           label:'全ダウン耐性+',
           data:0
         },{
-          label:'PA/テクニック命中後5.0秒間に与えたダメージの50%を次のPA/テクニックのダメージに追加',
+          label:'累加',
           data:''
         },
       ]
-      this.value.forEach(item => {
-        ngs.ability.forEach(ability => {
-          if (that.fuzzyMatch(ability.oldAB,item[1]) && item[1] !== ''){
-              that.switchNgs(ability,values)
-          }
-        })
+      value.forEach(item => {
+        if (item !== '' ){
+          ngs.ability.forEach(ability => {
+            console.log(item[1])
+            ability.oldAB.split('|').forEach(split => {
+              if (split===item[1]){
+                values = that.switchNgs(split,values)
+                console.log(item[1])
+              }
+            })
+
+          })
+          ngs.unitAbilitySop.forEach(unitAbilitySop => {
+            unitAbilitySop.oldAB.split('|').forEach(split => {
+              if (split===item[1]){
+                values = that.switchNgs(split,values)
+                console.log(item[1])
+              }
+            })
+          })
+          ngs.abilitySop.forEach(abilitySop => {
+            abilitySop.oldAB.split('|').forEach(split => {
+              if (split===item[1]){
+                values = that.switchNgs(split,values)
+                console.log(item[1])
+              }
+            })
+          })
+        }
+
       })
+      this.property = values
     },
     switchNgs(p,value){
       let param = p.type
@@ -317,44 +349,45 @@ export default {
           case 'A':
             value[0].data += abl[i]
           case 'A-':
-            value[8].data += abl[i]
+            value[9].data += abl[i]
           case 'A+':
             value[4].data += abl[i]
           case 'A++':
-            value[18].data += abl[i]
+            value[19].data += abl[i]
           case 'AA':
             value[1].data += abl[i]
           case 'AB':
-            return
+            value[2].data += abl[i]
           case 'AC':
-            return
+            value[3].data += abl[i]
           case 'B':
-            return
+            value[5].data += abl[i]
           case 'C':
-            return
+            value[6].data += abl[i]
           case 'C++':
-            return
+            value[7].data += abl[i]
           case 'C+':
-            return
+            value[8].data += abl[i]
           case 'D':
-            return
+            value[10].data += abl[i]
           case 'DA':
-            return
+            value[11].data += abl[i]
           case 'DB':
-            return
+            value[12].data += abl[i]
           case 'DC':
-            return
+            value[13].data += abl[i]
           case 'DD':
-            return
+            value[14].data += abl[i]
           case 'DE':
-            return
+            value[15].data += abl[i]
           case 'DF':
-            return
+            value[16].data += abl[i]
           case 'DG':
-            return
+            value[17].data += abl[i]
           default:
-            return '';
+            break
         }
+        return value
       }
 
     },

@@ -79,7 +79,6 @@ export default {
     this.unitAbilitySop = ngsParams().unitAbilitySop
     this.abilitySop = ngsParams().abilitySop
     this.reloadP()
-    this.changePage(1)
   },methods:{
     reloadP(){
       this.load = true
