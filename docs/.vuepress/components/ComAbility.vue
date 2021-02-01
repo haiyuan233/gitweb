@@ -365,7 +365,7 @@
                 <el-table
                         :cell-style="{'font-size':'5px'}"
                         :data="[
-                      {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'ソール・カタリスト',param4:'ソール・カタリスト',param5:'ダークネス・ソール',success:'30%'}
+                      {param1:'ソール・カタリスト',param2:'ソール・カタリスト',param3:'ソール・カタリスト',param4:'ソール・カタリスト',param5:'ダークネス・ソール',success:'10%'}
                       ]"
                 >
                   <el-table-column
@@ -523,7 +523,7 @@
                 <el-table
                         :cell-style="{'font-size':'5px'}"
                         :data="[
-                      {param1:'ファクター・カタリスト',param2:'ファクター・カタリスト',param3:'ファクター・カタリスト',param4:'ファクター・カタリスト',param5:'エーテル・ソール',success:'30%'}
+                      {param1:'ファクター・カタリスト',param2:'ファクター・カタリスト',param3:'ファクター・カタリスト',param4:'ファクター・カタリスト',param5:'エーテル・ソール',success:'10%'}
                       ]"
                 >
                   <el-table-column
@@ -685,7 +685,7 @@
                 <el-table
                     :cell-style="{'font-size':'5px'}"
                     :data="[
-                      {param1:'レヴリー・カタリスト',param2:'レヴリー・カタリスト',param3:'レヴリー・カタリスト',param4:'レヴリー・カタリスト',param5:'オメガ・メモリア',success:'30%'}
+                      {param1:'レヴリー・カタリスト',param2:'レヴリー・カタリスト',param3:'レヴリー・カタリスト',param4:'レヴリー・カタリスト',param5:'オメガ・メモリア',success:'10%'}
                       ]"
                 >
                   <el-table-column
@@ -841,7 +841,7 @@
                 <el-table
                     :cell-style="{'font-size':'5px'}"
                     :data="[
-                      {param1:'グレア・カタリスト',param2:'グレア・カタリスト',param3:'グレア・カタリスト',param4:'グレア・カタリスト',param5:'フォトナー・グレア',success:'30%'}
+                      {param1:'グレア・カタリスト',param2:'グレア・カタリスト',param3:'グレア・カタリスト',param4:'グレア・カタリスト',param5:'フォトナー・グレア',success:'10%'}
                       ]"
                 >
                   <el-table-column
