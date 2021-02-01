@@ -8,6 +8,10 @@ module.exports = {
             title: 'pso2',
             collapsable: true,
             children: getChildren('./docs/views/pso2')
+        },{
+            title: 'ngs',
+            collapsable: true,
+            children: getChildren('./docs/views/ngs')
         }
     ]
 

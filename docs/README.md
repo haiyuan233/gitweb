@@ -1,7 +1,7 @@
 ---
 home: true
 sidebar: false
-bgImage: 'http://42.193.176.171/bg.png'
+bgImage: '/bg.png'
 bgImageStyle: {
   height: '350px'
 }
