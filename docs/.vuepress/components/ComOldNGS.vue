@@ -16,7 +16,7 @@
           </el-tooltip>
           </template>
         </el-table-column>
-        <el-table-column property="oldAB" label="对应PSO2特殊能力" align="center"></el-table-column>
+        <el-table-column property="list" label="对应PSO2特殊能力" align="center"></el-table-column>
       </el-table>
       <H2>武器SOP</H2>
       <el-table
