@@ -928,7 +928,7 @@ export function ngsParams() {
         weaponAbility:[
             {
                name:'連撃の型',
-               effect:'威力+20%/通常攻撃を3回行うことで60秒間威力+3.0%,クリティカル発生率+15%,リキャスト時間30秒',
+               effect:'威力+20%/通常攻撃を3回行うことで60秒間威力+3.0%/クリティカル発生率+15%/リキャスト時間30秒',
                 data: {
                     img:[
                         'https://image.swiki.jp/img1/?host=pso2&page=%E3%82%BD%E3%83%BC%E3%83%89&src=%E5%85%89%E7%BA%8F%E5%89%A3%E3%82%AF%E3%83%A9%E3%83%BC%E3%82%B9%E3%82%A8%E3%83%83%E3%82%B8.png',
@@ -975,7 +975,7 @@ export function ngsParams() {
                 }
             },{
                name:'気精の型',
-               effect:'威力+22%/PP30%以下で60秒間PP自然回復速度+30%,リキャスト時間30秒',
+               effect:'威力+22%/PP30%以下で60秒間PP自然回復速度+30%/リキャスト時間30秒',
                 data:{
                     img:[
                         'https://image.swiki.jp/img1/?host=pso2&page=%E3%82%BD%E3%83%BC%E3%83%89&src=%E5%85%89%E8%B7%A1%E5%89%A3%E3%83%87%E3%82%A3%E3%83%A1%E3%82%B7%E3%82%AA%E3%83%B3.png',
@@ -985,7 +985,7 @@ export function ngsParams() {
 
             },{
                name:'堅忍の型',
-               effect:'威力+23%/残りHP以上のダメージを受けたときにHPが1残り無敵時間が発生,リキャスト時間600秒',
+               effect:'威力+23%/残りHP以上のダメージを受けたときにHPが1残り無敵時間が発生/リキャスト時間600秒',
                 data:{
                     img:[
                         'https://image.swiki.jp/img1/?host=pso2&page=%E3%82%BD%E3%83%BC%E3%83%89&src=%E3%82%A2%E3%83%88%E3%83%A9%E3%83%95%E3%82%A1%E3%83%BC%E3%83%80%E3%83%BB%E3%82%A4%E3%82%AF%E3%82%B9.png'
@@ -1004,7 +1004,7 @@ export function ngsParams() {
                }
             },{
                name:'利運の型',
-               effect:'威力+22%/ステップによる回避性能を3回まで蓄積し,被ダメージ時にその回数分HPを最大300回復',
+               effect:'威力+22%/ステップによる回避性能を3回まで蓄積し/被ダメージ時にその回数分HPを最大300回復',
                data:{
                    img:[
                        'https://image.swiki.jp/img1/?host=pso2&page=%E3%82%BD%E3%83%BC%E3%83%89&src=%E3%82%A2%E3%83%87%E3%83%AB%E3%83%AA%E3%83%BC%E3%83%8D%E3%82%A2.png',

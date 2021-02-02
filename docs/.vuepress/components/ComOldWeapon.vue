@@ -6,14 +6,18 @@
       <el-table-column
           prop="name"
           label="能力名"
-          width="180">
+          width="150">
       </el-table-column>
       <el-table-column
           prop="effect"
           label="效果"
-          width="180">
+          width="350">
         <template slot-scope="scope">
-          {{scope.row.effect.split('/')[0]}} <br/> {{scope.row.effect.split('/')[1]}}
+          <div class="wep-box">
+            <div v-for="cur in scope.row.effect.split('/')">
+              {{cur}}
+            </div>
+          </div>
         </template>
 
       </el-table-column>
