@@ -7,6 +7,10 @@
           prop="name"
           label="能力名"
           width="150">
+        <template slot-scope="scope">
+          <img src="https://image.swiki.jp/img1/?host=pso2&page=%E7%94%BB%E5%83%8F%E7%BD%AE%E5%A0%B4&src=%E6%BD%9C%E5%9C%A8%E8%83%BD%E5%8A%9B.png" style="vertical-align:middle" />
+          {{scope.row.name}}
+        </template>
       </el-table-column>
       <el-table-column
           prop="effect"
