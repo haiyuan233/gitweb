@@ -1,6 +1,6 @@
 ---
 title: 特殊能力
-date: 2021-1-28
+date: 2020-9-28
 sidebar: true
 categories:
  - pso2

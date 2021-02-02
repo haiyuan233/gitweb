@@ -1,6 +1,6 @@
 ---
 title: S级特殊能力
-date: 2021-1-26
+date: 2020-10-5
 sidebar: true
 categories:
  - pso2

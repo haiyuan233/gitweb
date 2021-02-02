@@ -73,7 +73,7 @@
         <el-carousel type="card" arrow="never" :autoplay="false" height="600px" indicator-position="none" ref="carousel0">
           <el-carousel-item @click.native="carousel(1)">
             <div class="item-box">
-              <h2>レッサー・XXXXⅤ的合成</h2>
+              <h2>レッサー・○○Ⅴ的合成</h2>
               レッサー系存在以下种类
               <ul style="color: #d77494;font-weight: 600">
                 <li>レッサーパワー</li>
@@ -226,7 +226,7 @@
       </div>
       <div style="margin-top: 50px">
         <el-steps :active="step" align-center>
-          <el-step title="步骤1" description="レッサー・XXXXⅤ的合成" @click.native="loadStep(1,0)"></el-step>
+          <el-step title="步骤1" description="レッサー・○○Ⅴ的合成" @click.native="loadStep(1,0)"></el-step>
           <el-step title="步骤2" description="EV系的合成" @click.native="loadStep(2,0)"></el-step>
         </el-steps>
       </div>
