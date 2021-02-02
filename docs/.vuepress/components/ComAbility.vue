@@ -491,7 +491,7 @@
                 <el-table
                     :cell-style="{'font-size':'5px'}"
                     :data="[
-                      {param1:'エーテル・ソール',param2:'ソールレセプター',param3:'',success:'10%'},
+                      {param1:'エーテル・ソール',param2:'ソールレセプター',param3:'',success:'100%'},
                       ]"
                 >
                   <el-table-column
