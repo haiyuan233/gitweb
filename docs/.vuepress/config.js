@@ -23,7 +23,7 @@ module.exports = {
         mode: 'light',
         modePicker: false,
         authorAvatar: '/avatar.jpg',
-        record: '黑ICP备20003393号',
+        record: '黑ICP备20003393号-2',
         recordLink: 'http://beian.miit.gov.cn/',
         // 项目开始时间，只填写年份
         startYear: '2019',
