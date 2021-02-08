@@ -946,6 +946,15 @@ export function ngsParams() {
                     list:['「スティル」シリーズ']
                 }
             },{
+                name:'不倒の型',
+                effect:'威力+23％/全ダウン耐性+20%',
+                data:{
+                    img:[
+                        'https://image.swiki.jp/img1/?host=pso2&page=%E3%82%BD%E3%83%BC%E3%83%89&src=%E3%83%95%E3%83%AB%E3%82%AF%E3%82%B7%E3%82%AA%E3%83%B4%E3%82%A7%E3%83%AB%E3%83%A9.png',
+                    ],
+                    list:['「フルクシオ」シリーズ']
+                }
+            },{
                name:'傾覆の型',
                effect:'威力+23%/全ダウン蓄積値+20%',
                 data:{
