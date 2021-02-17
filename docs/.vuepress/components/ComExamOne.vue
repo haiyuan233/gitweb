@@ -10,7 +10,7 @@
                         :clone="cloneDog"
                         @change="log"
                 >
-                    <div class="list-group-item" v-for="element in list1" :key="element.id">
+                    <div class="list-group-item" v-for="element in list1" :key="element.code" style="font-size: 11px">
                         {{ element.name }}
                     </div>
                 </draggable>
@@ -23,7 +23,7 @@
                         group="people"
                         @change="log"
                 >
-                    <div class="list-group-item" v-for="element in list2" :key="element.id">
+                    <div class="list-group-item" v-for="element in list2" :key="element.code">
                         {{ element.name }}
                     </div>
                 </draggable>
@@ -36,7 +36,7 @@
                         group="people"
                         @change="log"
                 >
-                    <div class="list-group-item" v-for="element in list3" :key="element.id">
+                    <div class="list-group-item" v-for="element in list3" :key="element.code">
                         {{ element.name }}
                     </div>
                 </draggable>
@@ -49,7 +49,7 @@
                         group="people"
                         @change="log"
                 >
-                    <div class="list-group-item" v-for="element in list4" :key="element.id">
+                    <div class="list-group-item" v-for="element in list4" :key="element.code">
                         {{ element.name }}
                     </div>
                 </draggable>
@@ -62,7 +62,7 @@
                         group="people"
                         @change="log"
                 >
-                    <div class="list-group-item" v-for="element in list5" :key="element.id">
+                    <div class="list-group-item" v-for="element in list5" :key="element.code">
                         {{ element.name }}
                     </div>
                 </draggable>
@@ -75,22 +75,23 @@
                         group="people"
                         @change="log"
                 >
-                    <div class="list-group-item" v-for="element in list6" :key="element.id">
+                    <div class="list-group-item" v-for="element in list6" :key="element.code">
                         {{ element.name }}
                     </div>
                 </draggable>
             </el-col>
         </el-row>
 
-        <rawDisplayer class="col-3" :value="list1" title="List 1" />
+<!--        <rawDisplayer class="col-3" :value="list1" title="List 1" />-->
 
-        <rawDisplayer class="col-3" :value="list2" title="List 2" />
+<!--        <rawDisplayer class="col-3" :value="list2" title="List 2" />-->
     </div>
 </template>
 
 <script>
     import draggable from 'vuedraggable'
-    let idGlobal = 8;
+    import {params} from '/docs/js/param'
+    // let idGlobal = 8;
     export default {
         name: "com-exam-one",
         display: "Custom Clone",
@@ -100,46 +101,44 @@
         data: function () {
             return {
                 list1: [
-                    { name: "dog 1", id: 1 },
-                    { name: "dog 2", id: 2 },
-                    { name: "dog 3", id: 3 },
-                    { name: "dog 4", id: 4 }
+
                 ],
                 list2: [
-                    { name: "cat 5", id: 5 },
-                    { name: "cat 6", id: 6 },
-                    { name: "cat 7", id: 7 }
+
                 ],
                 list3: [
-                    { name: "cat 5", id: 5 },
-                    { name: "cat 6", id: 6 },
-                    { name: "cat 7", id: 7 }
+
                 ],
                 list4: [
-                    { name: "cat 5", id: 5 },
-                    { name: "cat 6", id: 6 },
-                    { name: "cat 7", id: 7 }
+
                 ],
                 list5: [
-                    { name: "cat 5", id: 5 },
-                    { name: "cat 6", id: 6 },
-                    { name: "cat 7", id: 7 }
+
                 ],
                 list6: [
-                    { name: "cat 5", id: 5 },
-                    { name: "cat 6", id: 6 },
-                    { name: "cat 7", id: 7 }
+
                 ],
             };
+        },
+        mounted() {
+            this.list1 = params().abilityList
         },
         methods: {
             log: function(evt) {
                 window.console.log(evt);
             },
-            cloneDog({ id }) {
+            cloneDog({ name }) {
                 return {
-                    id: idGlobal++,
-                    name: `cat ${id}`
+                    // id: `${e.code}`,
+                    // gid: `${e.gid}`,
+                    // lvup: `${e.lvup}`,
+                    // extend: `${e.extend}`,
+                    // generate: `${e.generate}`,
+                    // status: `${e.status}`,
+                    // effect: `${e.effect}`,
+                    // cls: `${e.cls}`,
+                    // dom: `${e.dom}`,
+                    name: `${name}`
                 };
             }
         }
