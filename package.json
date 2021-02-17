@@ -17,6 +17,7 @@
     "async-validator": "^1.11.5",
     "element-ui": "^2.15.0",
     "vue-aplayer": "^1.6.1",
+    "vuedraggable": "^2.24.3",
     "vuepress-sidebar-atuo": "^1.0.3",
     "vuepress-theme-reco": "^1.6.1"
   }
