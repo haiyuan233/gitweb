@@ -1,6 +1,6 @@
 export function params() {
 
-var params = {lastModified: '2020-1-1 00:00:00(JST)',
+let params = {lastModified: '2020-1-1 00:00:00(JST)',
 
 optionList:{
 

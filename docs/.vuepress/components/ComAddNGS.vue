@@ -344,14 +344,13 @@ export default {
           ngs.ability.forEach(ability => {
             // console.log(item[1])
             ability.oldAB.split('|').forEach(split => {
-              console.log('对象',item[1])
-              console.log('目标',split)
               if (split===item[1]){
+                console.log('对象',item[1])
+                console.log('目标',split)
                 console.log(ability)
                 for (let i = 0; i < ability.type.length; i++) {
                   values = that.switchNgs(ability.value[i],ability.type[i],values)
                 }
-
               }
             })
 
@@ -384,7 +383,6 @@ export default {
       this.property = values
     },
     switchNgs(splitV,splitT,value){
-      console.log(splitV,splitT)
       switch (splitT){
         // 01239 倍率相乘
         // 8 减耗
@@ -394,7 +392,7 @@ export default {
           value[0].data = parseFloat((value[0].data * 100 +10000) * (splitV * 100 + 10000) / 1000000 - 100).toFixed(4)
           break
         case 'A-':
-          value[9].data = parseFloat((value[0].data * 100 +10000) * (splitV * 100 + 10000) / 1000000 - 100).toFixed(4)
+          value[9].data = parseFloat((value[9].data * 100 +10000) * (splitV * 100 + 10000) / 1000000 - 100).toFixed(4)
           break
         case 'A+':
           value[4].data += splitV
@@ -403,13 +401,13 @@ export default {
           value[18].data += splitV
           break
         case 'AA':
-          value[1].data = parseFloat((value[0].data * 100 +10000) * (splitV * 100 + 10000) / 1000000 - 100).toFixed(4)
+          value[1].data = parseFloat((value[1].data * 100 +10000) * (splitV * 100 + 10000) / 1000000 - 100).toFixed(4)
           break
         case 'AB':
-          value[2].data = parseFloat((value[0].data * 100 +10000) * (splitV * 100 + 10000) / 1000000 - 100).toFixed(4)
+          value[2].data = parseFloat((value[2].data * 100 +10000) * (splitV * 100 + 10000) / 1000000 - 100).toFixed(4)
           break
         case 'AC':
-          value[3].data = parseFloat((value[0].data * 100 +10000) * (splitV * 100 + 10000) / 1000000 - 100).toFixed(4)
+          value[3].data = parseFloat((value[3].data * 100 +10000) * (splitV * 100 + 10000) / 1000000 - 100).toFixed(4)
           break
         case 'B':
           value[5].data += splitV
