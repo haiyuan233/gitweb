@@ -1,6 +1,7 @@
 export function equip() {
     let equip = {
         armorB:[
+
             {name:"バーウィンa",pic:"https://image.swiki.jp/img1/?host=pso2&page=%E3%83%AA%E3%82%A2&src=バーウィン.png",rank:2,HP:20,PP:0,patk:0,satk:0,tatk:0,gp:0,pdef:18,sdef:21,tdef:21,pg:0,sg:0,tg:0,fdown:4,idown:0,tdown:0,wdown:4,ldown:0,ddown:0},
             {name:"ライザックa",pic:"https://image.swiki.jp/img1/?host=pso2&page=%E3%83%AA%E3%82%A2&src=ライザック.png",rank:2,HP:15,PP:0,patk:0,satk:0,tatk:0,gp:0,pdef:21,sdef:21,tdef:19,pg:0,sg:0,tg:0,fdown:0,idown:0,tdown:4,wdown:0,ldown:0,ddown:4},
             {name:"バーティウィアa",pic:"https://image.swiki.jp/img1/?host=pso2&page=%E3%83%AA%E3%82%A2&src=バーティウィア.png",rank:2,HP:20,PP:0,patk:0,satk:0,tatk:0,gp:0,pdef:41,sdef:46,tdef:46,pg:0,sg:0,tg:0,fdown:4,idown:0,tdown:0,wdown:4,ldown:0,ddown:0},
