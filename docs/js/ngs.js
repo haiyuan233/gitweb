@@ -951,8 +951,12 @@ export function ngsParams() {
                 data:{
                     img:[
                         'https://image.swiki.jp/img1/?host=pso2&page=%E3%82%BD%E3%83%BC%E3%83%89&src=%E3%83%95%E3%83%AB%E3%82%AF%E3%82%B7%E3%82%AA%E3%83%B4%E3%82%A7%E3%83%AB%E3%83%A9.png',
+                        'https://image.swiki.jp/img1/?host=pso2&page=%E3%82%BD%E3%83%BC%E3%83%89&src=%E3%83%AA%E3%83%B3%E3%82%B6%E3%83%BC%E3%83%B4%E3%82%A7%E3%83%AB%E3%83%A9.png'
                     ],
-                    list:['「フルクシオ」シリーズ']
+                    list:[
+                        '「フルクシオ」シリーズ',
+                        '「リンザー」シリーズ'
+                    ]
                 }
             },{
                name:'傾覆の型',

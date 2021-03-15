@@ -78,7 +78,7 @@
       </el-col>
     </el-row>
     <ul style="font-size: 16px">
-      <li>大部分SOP未验证，按<a href="/views/ngs/ngsop" style="color: #d77494">对照表</a>进行计算，对照表中不存在的SOP自行计算</li>
+      <li>大部分SOP未验证，按<a href="/views/ngs/ngsop.html" style="color: #d77494">对照表</a>进行计算，对照表中不存在的SOP自行计算</li>
       <li>伤害上升，减耗系按乘算</li>
     </ul>
   </div>
