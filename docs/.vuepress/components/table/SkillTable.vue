@@ -7,8 +7,8 @@
     </h2>
     <div style="margin-bottom: 20px">
       <template>
-        <template v-if="data.type"><el-tag effect="dark">主动技能</el-tag></template>
-        <template v-else><el-tag type="info" effect="dark">被动技能</el-tag></template>
+        <template v-if="data.type"><el-tag type="danger" effect="dark">主动技能</el-tag></template>
+        <template v-else><el-tag type="warning" effect="dark">被动技能</el-tag></template>
       </template>
       <template>
         <template v-if="data.restrict" ><el-tag type="danger" effect="dark">主职专用</el-tag></template>
@@ -19,7 +19,10 @@
       </template>
     </div>
 
-    <li>{{data.message}}</li>
+    <div v-for="item in data.message">
+      <li>{{item}}</li>
+    </div>
+
 
     <div style="padding-top: 50px" v-if="data.level !== null">
       <el-table

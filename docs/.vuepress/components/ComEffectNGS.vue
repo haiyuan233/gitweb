@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="margin-bottom: 20px"><span style="vertical-align:middle;font-size: 20px;font-weight: bolder">翻译来源:</span> &nbsp;&nbsp;&nbsp;
-      <a href="https://space.bilibili.com/2456508/"><i class="iconfont reco-bilibili cursorsHover" style="color:#d77494;vertical-align:middle;font-size: 30px"></i></a>
+      <a href="https://space.bilibili.com/2456508/" title="天狐又仙的主页" style="text-decoration: none"><i class="iconfont reco-bilibili cursorsHover" style="color:#d77494;vertical-align:middle;font-size: 30px"></i></a>
       &nbsp;&nbsp;&nbsp;<el-tag type="danger">SHIP 9 - ルルティエ</el-tag>
     </div>
     <template>
